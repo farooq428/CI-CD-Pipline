@@ -1,3 +1,4 @@
+require("dotenv").config();
 import express from "express"
 
 const app= express();
@@ -13,7 +14,16 @@ app.get('/', (req, res) =>{
 }
 )
 
-const PORT = 3000;
+app.get('/test' , (req , res) => {
+    res.json(
+        {
+            "msg" : "Testing routes " ,
+            "updates " : 'first update today '
+        }
+    )
+})
+
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT , () => {
     console.log(`server running on port ${PORT} `);
