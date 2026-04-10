@@ -17,7 +17,8 @@ app.get('/test' , (req , res) => {
     res.json(
         {
             "msg" : "Testing routes " ,
-            "updates " : 'first update today '
+            "updates " : 'first update today ',
+            "newUpdate" : "deployment testing "
         }
     )
 })
